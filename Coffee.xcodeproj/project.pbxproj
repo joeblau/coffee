@@ -8,13 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		EDEEDCCE243414FA005BF814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEDCCD243414FA005BF814 /* AppDelegate.swift */; };
-		EDEEDCD0243414FA005BF814 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEDCCF243414FA005BF814 /* SceneDelegate.swift */; };
 		EDEEDCD2243414FA005BF814 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEDCD1243414FA005BF814 /* ViewController.swift */; };
-		EDEEDCD5243414FA005BF814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDEEDCD3243414FA005BF814 /* Main.storyboard */; };
 		EDEEDCD7243414FB005BF814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDEEDCD6243414FB005BF814 /* Assets.xcassets */; };
 		EDEEDCDA243414FB005BF814 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDEEDCD8243414FB005BF814 /* LaunchScreen.storyboard */; };
 		EDEEDCE5243414FB005BF814 /* CoffeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEDCE4243414FB005BF814 /* CoffeeTests.swift */; };
 		EDEEDCF0243414FB005BF814 /* CoffeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEDCEF243414FB005BF814 /* CoffeeUITests.swift */; };
+		EDEEDCFF2434159C005BF814 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEDCFE2434159C005BF814 /* URLSession+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +36,7 @@
 /* Begin PBXFileReference section */
 		EDEEDCCA243414FA005BF814 /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDEEDCCD243414FA005BF814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EDEEDCCF243414FA005BF814 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EDEEDCD1243414FA005BF814 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EDEEDCD4243414FA005BF814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDEEDCD6243414FB005BF814 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDEEDCD9243414FB005BF814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDEEDCDB243414FB005BF814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +46,7 @@
 		EDEEDCEB243414FB005BF814 /* CoffeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDEEDCEF243414FB005BF814 /* CoffeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeUITests.swift; sourceTree = "<group>"; };
 		EDEEDCF1243414FB005BF814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDEEDCFE2434159C005BF814 /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +97,9 @@
 		EDEEDCCC243414FA005BF814 /* Coffee */ = {
 			isa = PBXGroup;
 			children = (
+				EDEEDCFD24341572005BF814 /* Extensions */,
 				EDEEDCCD243414FA005BF814 /* AppDelegate.swift */,
-				EDEEDCCF243414FA005BF814 /* SceneDelegate.swift */,
 				EDEEDCD1243414FA005BF814 /* ViewController.swift */,
-				EDEEDCD3243414FA005BF814 /* Main.storyboard */,
 				EDEEDCD6243414FB005BF814 /* Assets.xcassets */,
 				EDEEDCD8243414FB005BF814 /* LaunchScreen.storyboard */,
 				EDEEDCDB243414FB005BF814 /* Info.plist */,
@@ -126,6 +123,14 @@
 				EDEEDCF1243414FB005BF814 /* Info.plist */,
 			);
 			path = CoffeeUITests;
+			sourceTree = "<group>";
+		};
+		EDEEDCFD24341572005BF814 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EDEEDCFE2434159C005BF814 /* URLSession+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +239,6 @@
 			files = (
 				EDEEDCDA243414FB005BF814 /* LaunchScreen.storyboard in Resources */,
 				EDEEDCD7243414FB005BF814 /* Assets.xcassets in Resources */,
-				EDEEDCD5243414FA005BF814 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +265,7 @@
 			files = (
 				EDEEDCD2243414FA005BF814 /* ViewController.swift in Sources */,
 				EDEEDCCE243414FA005BF814 /* AppDelegate.swift in Sources */,
-				EDEEDCD0243414FA005BF814 /* SceneDelegate.swift in Sources */,
+				EDEEDCFF2434159C005BF814 /* URLSession+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +301,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EDEEDCD3243414FA005BF814 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EDEEDCD4243414FA005BF814 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EDEEDCD8243414FB005BF814 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
