@@ -113,6 +113,7 @@ class EventCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(with groupEvent: GroupEvent) {
+        self.groupEvent = groupEvent
         dateLabel.text = DateFormatter.monthDay.string(from: groupEvent.startAt)
         venueLabel.text = groupEvent.venue.name
         groupNameLabel.text = groupEvent.name

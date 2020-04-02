@@ -29,6 +29,7 @@ struct GroupEvent: Hashable, Codable {
 struct Venue: Hashable, Codable {
     var name: String
     var url: URL
+    var location: Location
 }
 
 struct Location: Hashable, Codable {

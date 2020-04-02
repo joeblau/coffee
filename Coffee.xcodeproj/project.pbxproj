@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED12C4F524367AC500BE7FCF /* MKMarkerAnnotationView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED12C4F424367AC500BE7FCF /* MKMarkerAnnotationView+Extensions.swift */; };
+		ED33A27424367A0700A01F50 /* VenueViewController+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33A27324367A0700A01F50 /* VenueViewController+MKMapViewDelegate.swift */; };
 		ED86D2592434183B007281C6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED86D2582434183B007281C6 /* Localizable.strings */; };
 		ED86D25B24341FD6007281C6 /* GroupsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D25A24341FD6007281C6 /* GroupsCollectionView.swift */; };
 		ED86D25F243422E6007281C6 /* GroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D25E243422E6007281C6 /* GroupCollectionViewCell.swift */; };
@@ -27,6 +29,7 @@
 		ED86D28C24365432007281C6 /* EventsDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D28B24365432007281C6 /* EventsDiffableDataSource.swift */; };
 		ED86D28E2436558E007281C6 /* EventsViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D28D2436558E007281C6 /* EventsViewController+UICollectionViewDelegate.swift */; };
 		ED86D29024365ECA007281C6 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D28F24365ECA007281C6 /* UIFont+Extensions.swift */; };
+		ED86D29324367198007281C6 /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D29224367198007281C6 /* VenueViewController.swift */; };
 		EDEEDCCE243414FA005BF814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEDCCD243414FA005BF814 /* AppDelegate.swift */; };
 		EDEEDCD2243414FA005BF814 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEDCD1243414FA005BF814 /* RootTabBarController.swift */; };
 		EDEEDCD7243414FB005BF814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDEEDCD6243414FB005BF814 /* Assets.xcassets */; };
@@ -55,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED12C4F424367AC500BE7FCF /* MKMarkerAnnotationView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMarkerAnnotationView+Extensions.swift"; sourceTree = "<group>"; };
+		ED33A27324367A0700A01F50 /* VenueViewController+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VenueViewController+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
 		ED86D2582434183B007281C6 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = Coffee/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		ED86D25A24341FD6007281C6 /* GroupsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsCollectionView.swift; sourceTree = "<group>"; };
 		ED86D25E243422E6007281C6 /* GroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -75,6 +80,7 @@
 		ED86D28B24365432007281C6 /* EventsDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDiffableDataSource.swift; sourceTree = "<group>"; };
 		ED86D28D2436558E007281C6 /* EventsViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventsViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		ED86D28F24365ECA007281C6 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		ED86D29224367198007281C6 /* VenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
 		EDEEDCCA243414FA005BF814 /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDEEDCCD243414FA005BF814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDEEDCD1243414FA005BF814 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
@@ -155,6 +161,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		ED86D29124367173007281C6 /* Venue */ = {
+			isa = PBXGroup;
+			children = (
+				ED86D29224367198007281C6 /* VenueViewController.swift */,
+				ED33A27324367A0700A01F50 /* VenueViewController+MKMapViewDelegate.swift */,
+			);
+			path = Venue;
+			sourceTree = "<group>";
+		};
 		EDEEDCC1243414FA005BF814 = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +232,7 @@
 				ED86D27A24358952007281C6 /* TableViewCell+Extensions.swift */,
 				ED86D28924365398007281C6 /* DateFormatter+Extensions.swift */,
 				ED86D28F24365ECA007281C6 /* UIFont+Extensions.swift */,
+				ED12C4F424367AC500BE7FCF /* MKMarkerAnnotationView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -224,7 +240,9 @@
 		EDEEDD02243416EB005BF814 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				ED86D29124367173007281C6 /* Venue */,
 				EDEEDCD1243414FA005BF814 /* RootTabBarController.swift */,
+				ED86D2702435886F007281C6 /* Events */,
 				EDEEDD03243416EF005BF814 /* Groups */,
 			);
 			path = Root;
@@ -233,7 +251,6 @@
 		EDEEDD03243416EF005BF814 /* Groups */ = {
 			isa = PBXGroup;
 			children = (
-				ED86D2702435886F007281C6 /* Events */,
 				ED86D25C24342223007281C6 /* Views */,
 				EDEEDD00243416E9005BF814 /* GroupsViewController.swift */,
 				ED86D26624342505007281C6 /* GroupsViewController+UICollectionViewDelegate.swift */,
@@ -376,16 +393,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED86D28624364518007281C6 /* World.swift in Sources */,
+				ED33A27424367A0700A01F50 /* VenueViewController+MKMapViewDelegate.swift in Sources */,
 				ED86D284243634C3007281C6 /* EventsCollectionView.swift in Sources */,
 				ED86D25F243422E6007281C6 /* GroupCollectionViewCell.swift in Sources */,
 				ED86D26F243505F6007281C6 /* CoffeeAPIController.swift in Sources */,
 				ED86D27F243633DB007281C6 /* EventValue.swift in Sources */,
 				ED86D26124342316007281C6 /* UICollectionViewCell+Extensions.swift in Sources */,
 				ED86D281243633EE007281C6 /* EventSection.swift in Sources */,
+				ED12C4F524367AC500BE7FCF /* MKMarkerAnnotationView+Extensions.swift in Sources */,
 				ED86D28C24365432007281C6 /* EventsDiffableDataSource.swift in Sources */,
 				ED86D26324342371007281C6 /* GroupsDiffableDataSource.swift in Sources */,
 				ED86D29024365ECA007281C6 /* UIFont+Extensions.swift in Sources */,
 				EDEEDD01243416E9005BF814 /* GroupsViewController.swift in Sources */,
+				ED86D29324367198007281C6 /* VenueViewController.swift in Sources */,
 				ED86D28824364A87007281C6 /* EventCollectionViewCell.swift in Sources */,
 				ED86D28E2436558E007281C6 /* EventsViewController+UICollectionViewDelegate.swift in Sources */,
 				ED86D273243588A8007281C6 /* EventsViewController.swift in Sources */,

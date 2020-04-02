@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct World {
     let coffeeAPI = CoffeeAPIController()
+    let locationManager = CLLocationManager()
 }
 
 let Current = World()

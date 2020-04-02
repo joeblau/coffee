@@ -29,4 +29,10 @@ extension DateFormatter {
         f.dateFormat = "HH:mm"
         return f
     }()
+    
+    static let relativeShort: RelativeDateTimeFormatter = {
+        let f = RelativeDateTimeFormatter()
+        f.unitsStyle = .short
+        return f
+    }()
 }
