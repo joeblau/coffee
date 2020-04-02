@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum URLSessionError: Error {
+    case httpStatusError
+}
+
 extension URLSession {
     static var sharedSession: URLSession {
         let configuration = URLSessionConfiguration.default
