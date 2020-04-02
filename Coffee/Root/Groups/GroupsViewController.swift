@@ -9,13 +9,16 @@
 import UIKit
 import Combine
 
-class GroupsViewController: UIViewController {
+final class GroupsViewController: UIViewController {
     
-    var cancellables = Set<AnyCancellable>()
-    
-    lazy var groupsCollectionView: GroupsCollectionView = { GroupsCollectionView() }()
-    let groupsController = CoffeeAPIController()
-    
+    private var cancellables = Set<AnyCancellable>()
+
+    lazy var groupsCollectionView: GroupsCollectionView = {
+        let v = GroupsCollectionView()
+        v.delegate = self
+        return v
+    }()
+
     init() {
         super.init(nibName: nil, bundle: nil)
         tabBarItem.title = NSLocalizedString("tab_groups_title", comment: "Coffee groups")
@@ -30,28 +33,33 @@ class GroupsViewController: UIViewController {
         super.viewDidLoad()
         title = NSLocalizedString("tab_groups_title", comment: "Coffee groups")
         view.backgroundColor = .systemBackground
-        
+        navigationController?.navigationBar.prefersLargeTitles = true
+
         view.addSubview(groupsCollectionView)
-        groupsCollectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        groupsCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        groupsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        groupsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        
+        NSLayoutConstraint.activate([
+            groupsCollectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            groupsCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            groupsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            groupsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        ])
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        groupsController.groups()
+        Current.coffeeAPI
+            .groups
             .sink(receiveCompletion: { error in
                 print(error)
             }) { coffeeGroups in
-                let items = coffeeGroups.compactMap { coffeeGroup -> GroupValue? in
+                let groups = coffeeGroups.compactMap { coffeeGroup -> GroupValue? in
                     GroupValue(group: coffeeGroup)
                 }
                 
                 var snapshot = NSDiffableDataSourceSnapshot<GroupSection, GroupValue>()
                 snapshot.appendSections([.groups])
-                snapshot.appendItems(items, toSection: .groups)
+                snapshot.appendItems(groups, toSection: .groups)
                 self.groupsCollectionView.diffableDataSource?.apply(snapshot)
         }
         .store(in: &cancellables)

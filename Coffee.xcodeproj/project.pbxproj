@@ -12,9 +12,21 @@
 		ED86D25F243422E6007281C6 /* GroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D25E243422E6007281C6 /* GroupCollectionViewCell.swift */; };
 		ED86D26124342316007281C6 /* UICollectionViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D26024342316007281C6 /* UICollectionViewCell+Extensions.swift */; };
 		ED86D26324342371007281C6 /* GroupsDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D26224342371007281C6 /* GroupsDiffableDataSource.swift */; };
-		ED86D265243423A2007281C6 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D264243423A2007281C6 /* Models.swift */; };
+		ED86D265243423A2007281C6 /* GroupValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D264243423A2007281C6 /* GroupValue.swift */; };
 		ED86D26724342505007281C6 /* GroupsViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D26624342505007281C6 /* GroupsViewController+UICollectionViewDelegate.swift */; };
 		ED86D26F243505F6007281C6 /* CoffeeAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D26E243505F6007281C6 /* CoffeeAPIController.swift */; };
+		ED86D273243588A8007281C6 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D272243588A8007281C6 /* EventsViewController.swift */; };
+		ED86D27B24358952007281C6 /* TableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D27A24358952007281C6 /* TableViewCell+Extensions.swift */; };
+		ED86D27D24358A4D007281C6 /* GroupSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D27C24358A4D007281C6 /* GroupSection.swift */; };
+		ED86D27F243633DB007281C6 /* EventValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D27E243633DB007281C6 /* EventValue.swift */; };
+		ED86D281243633EE007281C6 /* EventSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D280243633EE007281C6 /* EventSection.swift */; };
+		ED86D284243634C3007281C6 /* EventsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D283243634C3007281C6 /* EventsCollectionView.swift */; };
+		ED86D28624364518007281C6 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D28524364518007281C6 /* World.swift */; };
+		ED86D28824364A87007281C6 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D28724364A87007281C6 /* EventCollectionViewCell.swift */; };
+		ED86D28A24365398007281C6 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D28924365398007281C6 /* DateFormatter+Extensions.swift */; };
+		ED86D28C24365432007281C6 /* EventsDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D28B24365432007281C6 /* EventsDiffableDataSource.swift */; };
+		ED86D28E2436558E007281C6 /* EventsViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D28D2436558E007281C6 /* EventsViewController+UICollectionViewDelegate.swift */; };
+		ED86D29024365ECA007281C6 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D28F24365ECA007281C6 /* UIFont+Extensions.swift */; };
 		EDEEDCCE243414FA005BF814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEDCCD243414FA005BF814 /* AppDelegate.swift */; };
 		EDEEDCD2243414FA005BF814 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEDCD1243414FA005BF814 /* RootTabBarController.swift */; };
 		EDEEDCD7243414FB005BF814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDEEDCD6243414FB005BF814 /* Assets.xcassets */; };
@@ -48,9 +60,21 @@
 		ED86D25E243422E6007281C6 /* GroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED86D26024342316007281C6 /* UICollectionViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		ED86D26224342371007281C6 /* GroupsDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsDiffableDataSource.swift; sourceTree = "<group>"; };
-		ED86D264243423A2007281C6 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		ED86D264243423A2007281C6 /* GroupValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupValue.swift; sourceTree = "<group>"; };
 		ED86D26624342505007281C6 /* GroupsViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroupsViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		ED86D26E243505F6007281C6 /* CoffeeAPIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeAPIController.swift; sourceTree = "<group>"; };
+		ED86D272243588A8007281C6 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		ED86D27A24358952007281C6 /* TableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		ED86D27C24358A4D007281C6 /* GroupSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSection.swift; sourceTree = "<group>"; };
+		ED86D27E243633DB007281C6 /* EventValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventValue.swift; sourceTree = "<group>"; };
+		ED86D280243633EE007281C6 /* EventSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSection.swift; sourceTree = "<group>"; };
+		ED86D283243634C3007281C6 /* EventsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCollectionView.swift; sourceTree = "<group>"; };
+		ED86D28524364518007281C6 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
+		ED86D28724364A87007281C6 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED86D28924365398007281C6 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		ED86D28B24365432007281C6 /* EventsDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDiffableDataSource.swift; sourceTree = "<group>"; };
+		ED86D28D2436558E007281C6 /* EventsViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventsViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		ED86D28F24365ECA007281C6 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		EDEEDCCA243414FA005BF814 /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDEEDCCD243414FA005BF814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDEEDCD1243414FA005BF814 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
@@ -95,17 +119,10 @@
 		ED86D25C24342223007281C6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ED86D25E243422E6007281C6 /* GroupCollectionViewCell.swift */,
 				ED86D25A24341FD6007281C6 /* GroupsCollectionView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		ED86D25D2434222D007281C6 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				ED86D25E243422E6007281C6 /* GroupCollectionViewCell.swift */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		ED86D26D243505E0007281C6 /* Network */ = {
@@ -119,8 +136,23 @@
 		ED86D2702435886F007281C6 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				ED86D28224363493007281C6 /* Views */,
+				ED86D272243588A8007281C6 /* EventsViewController.swift */,
+				ED86D27E243633DB007281C6 /* EventValue.swift */,
+				ED86D280243633EE007281C6 /* EventSection.swift */,
+				ED86D28B24365432007281C6 /* EventsDiffableDataSource.swift */,
+				ED86D28D2436558E007281C6 /* EventsViewController+UICollectionViewDelegate.swift */,
 			);
 			path = Events;
+			sourceTree = "<group>";
+		};
+		ED86D28224363493007281C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED86D283243634C3007281C6 /* EventsCollectionView.swift */,
+				ED86D28724364A87007281C6 /* EventCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		EDEEDCC1243414FA005BF814 = {
@@ -154,6 +186,7 @@
 				EDEEDCD6243414FB005BF814 /* Assets.xcassets */,
 				EDEEDCD8243414FB005BF814 /* LaunchScreen.storyboard */,
 				EDEEDCDB243414FB005BF814 /* Info.plist */,
+				ED86D28524364518007281C6 /* World.swift */,
 			);
 			path = Coffee;
 			sourceTree = "<group>";
@@ -181,6 +214,9 @@
 			children = (
 				EDEEDCFE2434159C005BF814 /* URLSession+Extensions.swift */,
 				ED86D26024342316007281C6 /* UICollectionViewCell+Extensions.swift */,
+				ED86D27A24358952007281C6 /* TableViewCell+Extensions.swift */,
+				ED86D28924365398007281C6 /* DateFormatter+Extensions.swift */,
+				ED86D28F24365ECA007281C6 /* UIFont+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -198,12 +234,12 @@
 			isa = PBXGroup;
 			children = (
 				ED86D2702435886F007281C6 /* Events */,
-				ED86D25D2434222D007281C6 /* Cells */,
 				ED86D25C24342223007281C6 /* Views */,
 				EDEEDD00243416E9005BF814 /* GroupsViewController.swift */,
 				ED86D26624342505007281C6 /* GroupsViewController+UICollectionViewDelegate.swift */,
 				ED86D26224342371007281C6 /* GroupsDiffableDataSource.swift */,
-				ED86D264243423A2007281C6 /* Models.swift */,
+				ED86D264243423A2007281C6 /* GroupValue.swift */,
+				ED86D27C24358A4D007281C6 /* GroupSection.swift */,
 			);
 			path = Groups;
 			sourceTree = "<group>";
@@ -339,17 +375,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED86D28624364518007281C6 /* World.swift in Sources */,
+				ED86D284243634C3007281C6 /* EventsCollectionView.swift in Sources */,
 				ED86D25F243422E6007281C6 /* GroupCollectionViewCell.swift in Sources */,
 				ED86D26F243505F6007281C6 /* CoffeeAPIController.swift in Sources */,
+				ED86D27F243633DB007281C6 /* EventValue.swift in Sources */,
 				ED86D26124342316007281C6 /* UICollectionViewCell+Extensions.swift in Sources */,
+				ED86D281243633EE007281C6 /* EventSection.swift in Sources */,
+				ED86D28C24365432007281C6 /* EventsDiffableDataSource.swift in Sources */,
 				ED86D26324342371007281C6 /* GroupsDiffableDataSource.swift in Sources */,
+				ED86D29024365ECA007281C6 /* UIFont+Extensions.swift in Sources */,
 				EDEEDD01243416E9005BF814 /* GroupsViewController.swift in Sources */,
+				ED86D28824364A87007281C6 /* EventCollectionViewCell.swift in Sources */,
+				ED86D28E2436558E007281C6 /* EventsViewController+UICollectionViewDelegate.swift in Sources */,
+				ED86D273243588A8007281C6 /* EventsViewController.swift in Sources */,
 				ED86D25B24341FD6007281C6 /* GroupsCollectionView.swift in Sources */,
 				EDEEDCD2243414FA005BF814 /* RootTabBarController.swift in Sources */,
 				ED86D26724342505007281C6 /* GroupsViewController+UICollectionViewDelegate.swift in Sources */,
-				ED86D265243423A2007281C6 /* Models.swift in Sources */,
+				ED86D28A24365398007281C6 /* DateFormatter+Extensions.swift in Sources */,
+				ED86D265243423A2007281C6 /* GroupValue.swift in Sources */,
+				ED86D27B24358952007281C6 /* TableViewCell+Extensions.swift in Sources */,
 				EDEEDCCE243414FA005BF814 /* AppDelegate.swift in Sources */,
 				EDEEDCFF2434159C005BF814 /* URLSession+Extensions.swift in Sources */,
+				ED86D27D24358A4D007281C6 /* GroupSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

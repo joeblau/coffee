@@ -13,7 +13,7 @@ class GroupsDiffableDataSource: UICollectionViewDiffableDataSource<GroupSection,
         super.init(collectionView: collectionView) { (collectionView, indexPath, groupValue) -> UICollectionViewCell? in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GroupCollectionViewCell.id,
                                                                 for: indexPath) as? GroupCollectionViewCell else { return nil }
-            cell.configure(coffeeGroup: groupValue.group)
+            cell.configure(with: groupValue.group)
             return cell
         }
     }

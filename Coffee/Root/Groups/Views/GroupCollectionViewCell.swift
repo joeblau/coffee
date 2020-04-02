@@ -9,6 +9,7 @@
 import UIKit
 import Combine
 class GroupCollectionViewCell: UICollectionViewCell {
+    public private(set) var coffeeGroup: CoffeeGroup?
     private var cancellables = Set<AnyCancellable>()
 
     lazy var imageView: UIImageView = {
@@ -19,7 +20,7 @@ class GroupCollectionViewCell: UICollectionViewCell {
     }()
     
     lazy var titleBackground: UIVisualEffectView = {
-        let v = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+        let v = UIVisualEffectView(effect: UIBlurEffect(style: .systemMaterial))
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
@@ -40,32 +41,37 @@ class GroupCollectionViewCell: UICollectionViewCell {
         layer.masksToBounds = true
         
         contentView.addSubview(imageView)
-        imageView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-        imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        
         contentView.addSubview(titleBackground)
-        titleBackground.heightAnchor.constraint(equalToConstant: 48).isActive = true
-        titleBackground.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-        titleBackground.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        titleBackground.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        
         titleBackground.contentView.addSubview(titleLabel)
-        titleLabel.topAnchor.constraint(equalTo: titleBackground.topAnchor).isActive = true
-        titleLabel.bottomAnchor.constraint(equalTo: titleBackground.bottomAnchor).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: titleBackground.leadingAnchor).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: titleBackground.trailingAnchor).isActive = true
+
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            
+            
+            titleBackground.heightAnchor.constraint(equalToConstant: 48),
+            titleBackground.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            titleBackground.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            titleBackground.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            
+            titleLabel.topAnchor.constraint(equalTo: titleBackground.topAnchor),
+            titleLabel.bottomAnchor.constraint(equalTo: titleBackground.bottomAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: titleBackground.leadingAnchor),
+            titleLabel.trailingAnchor.constraint(equalTo: titleBackground.trailingAnchor),
+        ])
+
     }
 
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(coffeeGroup: CoffeeGroup) {
-        
+    func configure(with coffeeGroup: CoffeeGroup) {
+        self.coffeeGroup = coffeeGroup
         titleLabel.text = coffeeGroup.name
-        if let url = URL(string: coffeeGroup.imageUrl) {
+        if let url = URL(string: coffeeGroup.imageUrl.absoluteString) {
             URLSession.sharedSession
                 .dataTaskPublisher(for: url)
                 .sink(receiveCompletion: { error in
@@ -78,5 +84,4 @@ class GroupCollectionViewCell: UICollectionViewCell {
                 .store(in: &cancellables)
         }
     }
-
 }

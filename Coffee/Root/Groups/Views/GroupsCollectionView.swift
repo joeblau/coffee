@@ -15,13 +15,12 @@ class GroupsCollectionView: UICollectionView {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16)
 
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                heightDimension: .fractionalWidth(0.5))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])
-        group.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
 
         let section = NSCollectionLayoutSection(group: group)
         let layout = UICollectionViewCompositionalLayout(section: section)
@@ -30,9 +29,7 @@ class GroupsCollectionView: UICollectionView {
         translatesAutoresizingMaskIntoConstraints = false
         diffableDataSource = GroupsDiffableDataSource(collectionView: self)
         dataSource = diffableDataSource
-//        showsHorizontalScrollIndicator = false
         backgroundColor = .systemBackground
-//        refreshControl = UIRefreshControl()
         register(GroupCollectionViewCell.self,
                  forCellWithReuseIdentifier: GroupCollectionViewCell.id)
     }
