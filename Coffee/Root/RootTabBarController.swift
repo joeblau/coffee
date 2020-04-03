@@ -9,6 +9,7 @@ class RootTabBarController: UITabBarController {
         viewControllers = [
             UINavigationController(rootViewController: GroupsViewController()),
             UINavigationController(rootViewController: NextViewController()),
+            UINavigationController(rootViewController: SettingsViewController()),
         ]
     }
 

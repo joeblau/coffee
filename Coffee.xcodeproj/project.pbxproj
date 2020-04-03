@@ -10,19 +10,20 @@
 		ED12C4F524367AC500BE7FCF /* MKMarkerAnnotationView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED12C4F424367AC500BE7FCF /* MKMarkerAnnotationView+Extensions.swift */; };
 		ED12C5182436E13800BE7FCF /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED12C5172436E13800BE7FCF /* NextViewController.swift */; };
 		ED12C51A2436E88700BE7FCF /* EmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED12C5192436E88700BE7FCF /* EmptyDataView.swift */; };
+		ED12C51D2436F00200BE7FCF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED12C51C2436F00200BE7FCF /* SettingsViewController.swift */; };
+		ED12C5202436F01B00BE7FCF /* SettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED12C51F2436F01B00BE7FCF /* SettingsTableView.swift */; };
+		ED12C5222436F08800BE7FCF /* DataSourceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED12C5212436F08800BE7FCF /* DataSourceModels.swift */; };
+		ED12C5242436F18200BE7FCF /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED12C5232436F18200BE7FCF /* SettingTableViewCell.swift */; };
+		ED12C526243782EE00BE7FCF /* SettingsViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED12C525243782EE00BE7FCF /* SettingsViewController+UITableViewDataSource.swift */; };
 		ED33A27424367A0700A01F50 /* VenueViewController+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33A27324367A0700A01F50 /* VenueViewController+MKMapViewDelegate.swift */; };
 		ED86D2592434183B007281C6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED86D2582434183B007281C6 /* Localizable.strings */; };
 		ED86D25B24341FD6007281C6 /* GroupsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D25A24341FD6007281C6 /* GroupsCollectionView.swift */; };
 		ED86D25F243422E6007281C6 /* GroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D25E243422E6007281C6 /* GroupCollectionViewCell.swift */; };
 		ED86D26124342316007281C6 /* UICollectionViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D26024342316007281C6 /* UICollectionViewCell+Extensions.swift */; };
-		ED86D265243423A2007281C6 /* GroupValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D264243423A2007281C6 /* GroupValue.swift */; };
 		ED86D26724342505007281C6 /* GroupsViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D26624342505007281C6 /* GroupsViewController+UICollectionViewDelegate.swift */; };
 		ED86D26F243505F6007281C6 /* CoffeeAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D26E243505F6007281C6 /* CoffeeAPIController.swift */; };
 		ED86D273243588A8007281C6 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D272243588A8007281C6 /* EventsViewController.swift */; };
 		ED86D27B24358952007281C6 /* TableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D27A24358952007281C6 /* TableViewCell+Extensions.swift */; };
-		ED86D27D24358A4D007281C6 /* GroupSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D27C24358A4D007281C6 /* GroupSection.swift */; };
-		ED86D27F243633DB007281C6 /* EventValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D27E243633DB007281C6 /* EventValue.swift */; };
-		ED86D281243633EE007281C6 /* EventSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D280243633EE007281C6 /* EventSection.swift */; };
 		ED86D284243634C3007281C6 /* EventsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D283243634C3007281C6 /* EventsCollectionView.swift */; };
 		ED86D28624364518007281C6 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D28524364518007281C6 /* World.swift */; };
 		ED86D28824364A87007281C6 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D28724364A87007281C6 /* EventCollectionViewCell.swift */; };
@@ -59,19 +60,20 @@
 		ED12C4F424367AC500BE7FCF /* MKMarkerAnnotationView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMarkerAnnotationView+Extensions.swift"; sourceTree = "<group>"; };
 		ED12C5172436E13800BE7FCF /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		ED12C5192436E88700BE7FCF /* EmptyDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataView.swift; sourceTree = "<group>"; };
+		ED12C51C2436F00200BE7FCF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		ED12C51F2436F01B00BE7FCF /* SettingsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableView.swift; sourceTree = "<group>"; };
+		ED12C5212436F08800BE7FCF /* DataSourceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceModels.swift; sourceTree = "<group>"; };
+		ED12C5232436F18200BE7FCF /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		ED12C525243782EE00BE7FCF /* SettingsViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		ED33A27324367A0700A01F50 /* VenueViewController+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VenueViewController+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
 		ED86D2582434183B007281C6 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = Coffee/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		ED86D25A24341FD6007281C6 /* GroupsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsCollectionView.swift; sourceTree = "<group>"; };
 		ED86D25E243422E6007281C6 /* GroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED86D26024342316007281C6 /* UICollectionViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extensions.swift"; sourceTree = "<group>"; };
-		ED86D264243423A2007281C6 /* GroupValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupValue.swift; sourceTree = "<group>"; };
 		ED86D26624342505007281C6 /* GroupsViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroupsViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		ED86D26E243505F6007281C6 /* CoffeeAPIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeAPIController.swift; sourceTree = "<group>"; };
 		ED86D272243588A8007281C6 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		ED86D27A24358952007281C6 /* TableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewCell+Extensions.swift"; sourceTree = "<group>"; };
-		ED86D27C24358A4D007281C6 /* GroupSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSection.swift; sourceTree = "<group>"; };
-		ED86D27E243633DB007281C6 /* EventValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventValue.swift; sourceTree = "<group>"; };
-		ED86D280243633EE007281C6 /* EventSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSection.swift; sourceTree = "<group>"; };
 		ED86D283243634C3007281C6 /* EventsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCollectionView.swift; sourceTree = "<group>"; };
 		ED86D28524364518007281C6 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		ED86D28724364A87007281C6 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -124,11 +126,23 @@
 			path = Next;
 			sourceTree = "<group>";
 		};
-		ED12C51B2436EE8D00BE7FCF /* Options */ = {
+		ED12C51B2436EE8D00BE7FCF /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				ED12C51E2436F00F00BE7FCF /* Views */,
+				ED12C51C2436F00200BE7FCF /* SettingsViewController.swift */,
+				ED12C525243782EE00BE7FCF /* SettingsViewController+UITableViewDataSource.swift */,
 			);
-			path = Options;
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		ED12C51E2436F00F00BE7FCF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED12C51F2436F01B00BE7FCF /* SettingsTableView.swift */,
+				ED12C5232436F18200BE7FCF /* SettingTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		ED86D25C24342223007281C6 /* Views */ = {
@@ -153,8 +167,6 @@
 			children = (
 				ED86D28224363493007281C6 /* Views */,
 				ED86D272243588A8007281C6 /* EventsViewController.swift */,
-				ED86D27E243633DB007281C6 /* EventValue.swift */,
-				ED86D280243633EE007281C6 /* EventSection.swift */,
 				ED86D28D2436558E007281C6 /* EventsViewController+UICollectionViewDelegate.swift */,
 			);
 			path = Events;
@@ -208,6 +220,7 @@
 				EDEEDCD8243414FB005BF814 /* LaunchScreen.storyboard */,
 				EDEEDCDB243414FB005BF814 /* Info.plist */,
 				ED86D28524364518007281C6 /* World.swift */,
+				ED12C5212436F08800BE7FCF /* DataSourceModels.swift */,
 			);
 			path = Coffee;
 			sourceTree = "<group>";
@@ -228,7 +241,7 @@
 		EDEEDD02243416EB005BF814 /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				ED12C51B2436EE8D00BE7FCF /* Options */,
+				ED12C51B2436EE8D00BE7FCF /* Settings */,
 				ED12C5162436E11A00BE7FCF /* Next */,
 				ED86D29124367173007281C6 /* Venue */,
 				EDEEDCD1243414FA005BF814 /* RootTabBarController.swift */,
@@ -245,8 +258,6 @@
 				ED86D25C24342223007281C6 /* Views */,
 				EDEEDD00243416E9005BF814 /* GroupsViewController.swift */,
 				ED86D26624342505007281C6 /* GroupsViewController+UICollectionViewDelegate.swift */,
-				ED86D264243423A2007281C6 /* GroupValue.swift */,
-				ED86D27C24358A4D007281C6 /* GroupSection.swift */,
 			);
 			path = Groups;
 			sourceTree = "<group>";
@@ -387,27 +398,28 @@
 				ED33A27424367A0700A01F50 /* VenueViewController+MKMapViewDelegate.swift in Sources */,
 				ED86D284243634C3007281C6 /* EventsCollectionView.swift in Sources */,
 				ED86D25F243422E6007281C6 /* GroupCollectionViewCell.swift in Sources */,
+				ED12C5222436F08800BE7FCF /* DataSourceModels.swift in Sources */,
 				ED86D26F243505F6007281C6 /* CoffeeAPIController.swift in Sources */,
-				ED86D27F243633DB007281C6 /* EventValue.swift in Sources */,
 				ED86D26124342316007281C6 /* UICollectionViewCell+Extensions.swift in Sources */,
-				ED86D281243633EE007281C6 /* EventSection.swift in Sources */,
+				ED12C5242436F18200BE7FCF /* SettingTableViewCell.swift in Sources */,
 				ED12C4F524367AC500BE7FCF /* MKMarkerAnnotationView+Extensions.swift in Sources */,
 				ED86D29024365ECA007281C6 /* UIFont+Extensions.swift in Sources */,
 				ED12C5182436E13800BE7FCF /* NextViewController.swift in Sources */,
 				EDEEDD01243416E9005BF814 /* GroupsViewController.swift in Sources */,
 				ED86D29324367198007281C6 /* VenueViewController.swift in Sources */,
+				ED12C5202436F01B00BE7FCF /* SettingsTableView.swift in Sources */,
 				ED86D28824364A87007281C6 /* EventCollectionViewCell.swift in Sources */,
 				ED86D28E2436558E007281C6 /* EventsViewController+UICollectionViewDelegate.swift in Sources */,
 				ED86D273243588A8007281C6 /* EventsViewController.swift in Sources */,
+				ED12C526243782EE00BE7FCF /* SettingsViewController+UITableViewDataSource.swift in Sources */,
 				ED86D25B24341FD6007281C6 /* GroupsCollectionView.swift in Sources */,
 				EDEEDCD2243414FA005BF814 /* RootTabBarController.swift in Sources */,
 				ED86D26724342505007281C6 /* GroupsViewController+UICollectionViewDelegate.swift in Sources */,
 				ED86D28A24365398007281C6 /* DateFormatter+Extensions.swift in Sources */,
-				ED86D265243423A2007281C6 /* GroupValue.swift in Sources */,
 				ED86D27B24358952007281C6 /* TableViewCell+Extensions.swift in Sources */,
 				EDEEDCCE243414FA005BF814 /* AppDelegate.swift in Sources */,
 				EDEEDCFF2434159C005BF814 /* URLSession+Extensions.swift in Sources */,
-				ED86D27D24358A4D007281C6 /* GroupSection.swift in Sources */,
+				ED12C51D2436F00200BE7FCF /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

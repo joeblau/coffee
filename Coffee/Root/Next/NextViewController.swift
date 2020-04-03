@@ -17,8 +17,9 @@ final class NextViewController: UIViewController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
-        tabBarItem.title = NSLocalizedString("tab_near_me_title", comment: "Next drink")
-        tabBarItem.image = UIImage(systemName: "mappin.circle.fill")
+        tabBarItem = UITabBarItem(title: NSLocalizedString("tab_near_me_title", comment: "Near me tab bar title"),
+                                  image: UIImage(systemName: "location"),
+                                  selectedImage: UIImage(systemName: "location.fill"))
     }
 
     required init?(coder _: NSCoder) {
@@ -27,7 +28,7 @@ final class NextViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = NSLocalizedString("tab_near_me_title", comment: "Near me")
+        title = NSLocalizedString("tab_near_me_title", comment: "Near me tab")
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
 
