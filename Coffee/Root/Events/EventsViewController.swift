@@ -41,10 +41,7 @@ final class EventsViewController: UIViewController {
             eventsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             eventsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        
         Current.coffeeAPI
             .events(for: coffeeGroup.id)
             .sink(receiveCompletion: { (completion) in
@@ -58,9 +55,9 @@ final class EventsViewController: UIViewController {
                 var snapshot = NSDiffableDataSourceSnapshot<EventSection, EventValue>()
                 snapshot.appendSections([.events])
                 snapshot.appendItems(events, toSection: .events)
-                self.eventsCollectionView.diffableDataSource?.apply(snapshot)
+                self.eventsCollectionView.diffableDataSource.apply(snapshot)
             }
             .store(in: &cancellables)
     }
-    
+     
 }

@@ -22,7 +22,7 @@ final class GroupsViewController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
         tabBarItem.title = NSLocalizedString("tab_groups_title", comment: "Coffee groups")
-        tabBarItem.image = UIImage(systemName: "person.3.fill")
+        tabBarItem.image = UIImage(systemName: "person.3")
     }
     
     required init?(coder: NSCoder) {
@@ -43,10 +43,6 @@ final class GroupsViewController: UIViewController {
             groupsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             groupsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         
         Current.coffeeAPI
             .groups
@@ -60,9 +56,8 @@ final class GroupsViewController: UIViewController {
                 var snapshot = NSDiffableDataSourceSnapshot<GroupSection, GroupValue>()
                 snapshot.appendSections([.groups])
                 snapshot.appendItems(groups, toSection: .groups)
-                self.groupsCollectionView.diffableDataSource?.apply(snapshot)
+                self.groupsCollectionView.diffableDataSource.apply(snapshot)
         }
         .store(in: &cancellables)
     }
-    
 }

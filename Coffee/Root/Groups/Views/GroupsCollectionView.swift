@@ -9,7 +9,14 @@
 import UIKit
 
 class GroupsCollectionView: UICollectionView {
-    var diffableDataSource: GroupsDiffableDataSource?
+    lazy var diffableDataSource: UICollectionViewDiffableDataSource<GroupSection, GroupValue> = {
+        UICollectionViewDiffableDataSource(collectionView: self) { (collectionView, indexPath, groupValue) in
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GroupCollectionViewCell.id,
+                                                                for: indexPath) as? GroupCollectionViewCell else { return nil }
+            cell.configure(with: groupValue.group)
+            return cell
+        }
+    }()
     
     init() {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
@@ -27,11 +34,9 @@ class GroupsCollectionView: UICollectionView {
 
         super.init(frame: .zero, collectionViewLayout: layout)
         translatesAutoresizingMaskIntoConstraints = false
-        diffableDataSource = GroupsDiffableDataSource(collectionView: self)
         dataSource = diffableDataSource
         backgroundColor = .systemBackground
-        register(GroupCollectionViewCell.self,
-                 forCellWithReuseIdentifier: GroupCollectionViewCell.id)
+        register(GroupCollectionViewCell.self, forCellWithReuseIdentifier: GroupCollectionViewCell.id)
     }
 
     required init?(coder _: NSCoder) {

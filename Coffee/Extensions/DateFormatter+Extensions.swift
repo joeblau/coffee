@@ -26,7 +26,7 @@ extension DateFormatter {
     
     static let hoursMinutes: DateFormatter = {
         let f = DateFormatter()
-        f.dateFormat = "HH:mm"
+        f.dateFormat = "HH:mm a"
         return f
     }()
     

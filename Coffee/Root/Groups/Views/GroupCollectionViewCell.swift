@@ -10,8 +10,8 @@ import UIKit
 import Combine
 class GroupCollectionViewCell: UICollectionViewCell {
     public private(set) var coffeeGroup: CoffeeGroup?
-    private var cancellables = Set<AnyCancellable>()
-
+    private var operation: AnyCancellable?
+    
     lazy var imageView: UIImageView = {
         let v = UIImageView()
         v.translatesAutoresizingMaskIntoConstraints = false
@@ -42,6 +42,7 @@ class GroupCollectionViewCell: UICollectionViewCell {
         
         contentView.addSubview(imageView)
         contentView.addSubview(titleBackground)
+        
         titleBackground.contentView.addSubview(titleLabel)
 
         NSLayoutConstraint.activate([
@@ -49,7 +50,6 @@ class GroupCollectionViewCell: UICollectionViewCell {
             imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            
             
             titleBackground.heightAnchor.constraint(equalToConstant: 48),
             titleBackground.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
@@ -61,7 +61,6 @@ class GroupCollectionViewCell: UICollectionViewCell {
             titleLabel.leadingAnchor.constraint(equalTo: titleBackground.leadingAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: titleBackground.trailingAnchor),
         ])
-
     }
 
     required init?(coder _: NSCoder) {
@@ -72,16 +71,17 @@ class GroupCollectionViewCell: UICollectionViewCell {
         self.coffeeGroup = coffeeGroup
         titleLabel.text = coffeeGroup.name
         if let url = URL(string: coffeeGroup.imageUrl.absoluteString) {
-            URLSession.sharedSession
+            operation = URLSession.sharedSession
                 .dataTaskPublisher(for: url)
-                .sink(receiveCompletion: { error in
-                    print(error)
-                }) { (result: (data: Data, response: URLResponse)) in
-                    DispatchQueue.main.async {
-                        self.imageView.image = UIImage(data: result.data)
+                .tryMap { data, response -> UIImage in
+                    guard let image = UIImage(data: data) else {
+                        throw URLSessionError.imageDecodingError
                     }
+                    return image
                 }
-                .store(in: &cancellables)
+                .replaceError(with: UIImage(systemName: "􀇿"))
+                .receive(on: DispatchQueue.main)
+                .assign(to: \.imageView.image, on: self)
         }
     }
 }

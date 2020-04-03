@@ -12,7 +12,7 @@ import Combine
 class EventCollectionViewCell: UICollectionViewCell {
 
     public private(set) var groupEvent: GroupEvent?
-    private var cancellables = Set<AnyCancellable>()
+    private var operation: AnyCancellable?
     
     lazy var dateLabel: UILabel = {
         let l = UILabel()
@@ -84,12 +84,11 @@ class EventCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
-        
+    
         contentView.addSubview(dateContentStackView)
-        
         cardView.addSubview(cardImageView)
         cardView.addSubview(cardContentView)
-
+        
         NSLayoutConstraint.activate([
             dateContentStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             dateContentStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
@@ -126,17 +125,18 @@ class EventCollectionViewCell: UICollectionViewCell {
         
         if let imageUrl = groupEvent.imageUrl,
             let url = URL(string: imageUrl.absoluteString) {
-            URLSession.sharedSession
+
+            operation = URLSession.sharedSession
                 .dataTaskPublisher(for: url)
-                .sink(receiveCompletion: { error in
-                    print(error)
-                }) { (result: (data: Data, response: URLResponse)) in
-                    DispatchQueue.main.async {
-                        self.cardImageView.image = UIImage(data: result.data)
+                .tryMap { data, response -> UIImage in
+                    guard let image = UIImage(data: data) else {
+                        throw URLSessionError.imageDecodingError
                     }
+                    return image
                 }
-                .store(in: &cancellables)
+                .replaceError(with: UIImage(systemName: "􀇿"))
+                .receive(on: DispatchQueue.main)
+                .assign(to: \.cardImageView.image, on: self)
         }
     }
-
 }

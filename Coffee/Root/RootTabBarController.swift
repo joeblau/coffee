@@ -12,7 +12,10 @@ class RootTabBarController: UITabBarController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
-        viewControllers = [UINavigationController(rootViewController: GroupsViewController())]
+        viewControllers = [
+            UINavigationController(rootViewController: GroupsViewController()),
+            UINavigationController(rootViewController: NextViewController()),
+        ]
     }
     
     required init?(coder: NSCoder) {
