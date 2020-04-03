@@ -1,10 +1,5 @@
-//
-//  GroupSection.swift
-//  Coffee
-//
-//  Created by Joe Blau on 4/1/20.
-//  Copyright © 2020 Joe Blau. All rights reserved.
-//
+// GroupSection.swift
+// Copyright (c) 2020 Joe Blau
 
 import Foundation
 

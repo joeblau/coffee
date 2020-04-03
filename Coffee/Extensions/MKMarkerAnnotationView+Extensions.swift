@@ -1,10 +1,5 @@
-//
-//  MKAnnotation+Extensions.swift
-//  Coffee
-//
-//  Created by Joe Blau on 4/2/20.
-//  Copyright © 2020 Joe Blau. All rights reserved.
-//
+// MKMarkerAnnotationView+Extensions.swift
+// Copyright (c) 2020 Joe Blau
 
 import MapKit
 

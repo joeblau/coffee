@@ -1,10 +1,5 @@
-//
-//  URLSession+Extensions.swift
-//  Coffee
-//
-//  Created by Joe Blau on 3/31/20.
-//  Copyright © 2020 Joe Blau. All rights reserved.
-//
+// URLSession+Extensions.swift
+// Copyright (c) 2020 Joe Blau
 
 import Foundation
 
@@ -15,8 +10,8 @@ enum URLSessionError: Error {
 
 extension URLSession {
     static var sharedSession: URLSession = {
-        let cacheMemorySize = 1000*1024*1024
-        let cacheDiskSize = 1000*1024*1024
+        let cacheMemorySize = 1000 * 1024 * 1024
+        let cacheDiskSize = 1000 * 1024 * 1024
 
         let c = URLSessionConfiguration.default
         c.requestCachePolicy = .returnCacheDataElseLoad

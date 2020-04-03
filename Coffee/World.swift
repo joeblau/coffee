@@ -1,13 +1,8 @@
-//
-//  World.swift
-//  Coffee
-//
-//  Created by Joe Blau on 4/2/20.
-//  Copyright © 2020 Joe Blau. All rights reserved.
-//
+// World.swift
+// Copyright (c) 2020 Joe Blau
 
-import Foundation
 import CoreLocation
+import Foundation
 
 struct World {
     let coffeeAPI = CoffeeAPIController()

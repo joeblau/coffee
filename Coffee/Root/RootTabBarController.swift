@@ -1,15 +1,9 @@
-//
-//  ViewController.swift
-//  Coffee
-//
-//  Created by Joe Blau on 3/31/20.
-//  Copyright © 2020 Joe Blau. All rights reserved.
-//
+// RootTabBarController.swift
+// Copyright (c) 2020 Joe Blau
 
 import UIKit
 
 class RootTabBarController: UITabBarController {
-
     init() {
         super.init(nibName: nil, bundle: nil)
         viewControllers = [
@@ -17,10 +11,8 @@ class RootTabBarController: UITabBarController {
             UINavigationController(rootViewController: NextViewController()),
         ]
     }
-    
-    required init?(coder: NSCoder) {
+
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
-

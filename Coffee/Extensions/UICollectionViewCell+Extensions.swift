@@ -1,11 +1,5 @@
-//
-//  UICollectionViewCell+Extensions.swift
-//  Coffee
-//
-//  Created by Joe Blau on 3/31/20.
-//  Copyright © 2020 Joe Blau. All rights reserved.
-//
-
+// UICollectionViewCell+Extensions.swift
+// Copyright (c) 2020 Joe Blau
 
 import UIKit
 

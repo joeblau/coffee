@@ -34,8 +34,6 @@
 		EDEEDCD2243414FA005BF814 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEDCD1243414FA005BF814 /* RootTabBarController.swift */; };
 		EDEEDCD7243414FB005BF814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDEEDCD6243414FB005BF814 /* Assets.xcassets */; };
 		EDEEDCDA243414FB005BF814 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDEEDCD8243414FB005BF814 /* LaunchScreen.storyboard */; };
-		EDEEDCE5243414FB005BF814 /* CoffeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEDCE4243414FB005BF814 /* CoffeeTests.swift */; };
-		EDEEDCF0243414FB005BF814 /* CoffeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEDCEF243414FB005BF814 /* CoffeeUITests.swift */; };
 		EDEEDCFF2434159C005BF814 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEDCFE2434159C005BF814 /* URLSession+Extensions.swift */; };
 		EDEEDD01243416E9005BF814 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEDD00243416E9005BF814 /* GroupsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -88,11 +86,7 @@
 		EDEEDCD9243414FB005BF814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDEEDCDB243414FB005BF814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDEEDCE0243414FB005BF814 /* CoffeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDEEDCE4243414FB005BF814 /* CoffeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTests.swift; sourceTree = "<group>"; };
-		EDEEDCE6243414FB005BF814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDEEDCEB243414FB005BF814 /* CoffeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDEEDCEF243414FB005BF814 /* CoffeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeUITests.swift; sourceTree = "<group>"; };
-		EDEEDCF1243414FB005BF814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDEEDCFE2434159C005BF814 /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
 		EDEEDD00243416E9005BF814 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +122,13 @@
 				ED12C5172436E13800BE7FCF /* NextViewController.swift */,
 			);
 			path = Next;
+			sourceTree = "<group>";
+		};
+		ED12C51B2436EE8D00BE7FCF /* Options */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Options;
 			sourceTree = "<group>";
 		};
 		ED86D25C24342223007281C6 /* Views */ = {
@@ -181,8 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				EDEEDCCC243414FA005BF814 /* Coffee */,
-				EDEEDCE3243414FB005BF814 /* CoffeeTests */,
-				EDEEDCEE243414FB005BF814 /* CoffeeUITests */,
 				EDEEDCCB243414FA005BF814 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -213,24 +212,6 @@
 			path = Coffee;
 			sourceTree = "<group>";
 		};
-		EDEEDCE3243414FB005BF814 /* CoffeeTests */ = {
-			isa = PBXGroup;
-			children = (
-				EDEEDCE4243414FB005BF814 /* CoffeeTests.swift */,
-				EDEEDCE6243414FB005BF814 /* Info.plist */,
-			);
-			path = CoffeeTests;
-			sourceTree = "<group>";
-		};
-		EDEEDCEE243414FB005BF814 /* CoffeeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				EDEEDCEF243414FB005BF814 /* CoffeeUITests.swift */,
-				EDEEDCF1243414FB005BF814 /* Info.plist */,
-			);
-			path = CoffeeUITests;
-			sourceTree = "<group>";
-		};
 		EDEEDCFD24341572005BF814 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +228,7 @@
 		EDEEDD02243416EB005BF814 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				ED12C51B2436EE8D00BE7FCF /* Options */,
 				ED12C5162436E11A00BE7FCF /* Next */,
 				ED86D29124367173007281C6 /* Venue */,
 				EDEEDCD1243414FA005BF814 /* RootTabBarController.swift */,
@@ -433,7 +415,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDEEDCE5243414FB005BF814 /* CoffeeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +422,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDEEDCF0243414FB005BF814 /* CoffeeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

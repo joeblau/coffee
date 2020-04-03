@@ -1,23 +1,18 @@
-//
-//  GroupsCollectionView.swift
-//  Coffee
-//
-//  Created by Joe Blau on 3/31/20.
-//  Copyright © 2020 Joe Blau. All rights reserved.
-//
+// GroupsCollectionView.swift
+// Copyright (c) 2020 Joe Blau
 
 import UIKit
 
-class GroupsCollectionView: UICollectionView {
+final class GroupsCollectionView: UICollectionView {
     lazy var diffableDataSource: UICollectionViewDiffableDataSource<GroupSection, GroupValue> = {
-        UICollectionViewDiffableDataSource(collectionView: self) { (collectionView, indexPath, groupValue) in
+        UICollectionViewDiffableDataSource(collectionView: self) { collectionView, indexPath, groupValue in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GroupCollectionViewCell.id,
                                                                 for: indexPath) as? GroupCollectionViewCell else { return nil }
             cell.configure(with: groupValue.group)
             return cell
         }
     }()
-    
+
     init() {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                               heightDimension: .fractionalHeight(1.0))
@@ -42,5 +37,4 @@ class GroupsCollectionView: UICollectionView {
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }

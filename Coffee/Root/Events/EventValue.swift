@@ -1,10 +1,5 @@
-//
-//  EventValue.swift
-//  Coffee
-//
-//  Created by Joe Blau on 4/2/20.
-//  Copyright © 2020 Joe Blau. All rights reserved.
-//
+// EventValue.swift
+// Copyright (c) 2020 Joe Blau
 
 import Foundation
 

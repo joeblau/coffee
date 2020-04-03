@@ -1,24 +1,19 @@
-//
-//  UIFont+Extensions.swift
-//  Coffee
-//
-//  Created by Joe Blau on 4/2/20.
-//  Copyright © 2020 Joe Blau. All rights reserved.
-//
+// UIFont+Extensions.swift
+// Copyright (c) 2020 Joe Blau
 
 import UIKit
 
 extension UIFont {
-    func withTraits(traits:UIFontDescriptor.SymbolicTraits) -> UIFont {
+    func withTraits(traits: UIFontDescriptor.SymbolicTraits) -> UIFont {
         let descriptor = fontDescriptor.withSymbolicTraits(traits)
         return UIFont(descriptor: descriptor!, size: 0)
     }
 
     func bold() -> UIFont {
-        return withTraits(traits: .traitBold)
+        withTraits(traits: .traitBold)
     }
 
     func italic() -> UIFont {
-        return withTraits(traits: .traitItalic)
+        withTraits(traits: .traitItalic)
     }
 }

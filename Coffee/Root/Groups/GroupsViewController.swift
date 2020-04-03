@@ -1,16 +1,10 @@
-//
-//  GroupsViewController.swift
-//  Coffee
-//
-//  Created by Joe Blau on 3/31/20.
-//  Copyright © 2020 Joe Blau. All rights reserved.
-//
+// GroupsViewController.swift
+// Copyright (c) 2020 Joe Blau
 
-import UIKit
 import Combine
+import UIKit
 
 final class GroupsViewController: UIViewController {
-    
     private var cancellables = Set<AnyCancellable>()
 
     lazy var groupsCollectionView: GroupsCollectionView = {
@@ -24,11 +18,11 @@ final class GroupsViewController: UIViewController {
         tabBarItem.title = NSLocalizedString("tab_groups_title", comment: "Coffee groups")
         tabBarItem.image = UIImage(systemName: "person.3.fill")
     }
-    
-    required init?(coder: NSCoder) {
+
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = NSLocalizedString("tab_groups_title", comment: "Coffee groups")
@@ -36,14 +30,14 @@ final class GroupsViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
 
         view.addSubview(groupsCollectionView)
-        
+
         NSLayoutConstraint.activate([
             groupsCollectionView.topAnchor.constraint(equalTo: view.topAnchor),
             groupsCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             groupsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             groupsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
-        
+
         Current.coffeeAPI
             .groups
             .sink(receiveCompletion: { error in
@@ -52,12 +46,12 @@ final class GroupsViewController: UIViewController {
                 let groups = coffeeGroups.compactMap { coffeeGroup -> GroupValue? in
                     GroupValue(group: coffeeGroup)
                 }
-                
+
                 var snapshot = NSDiffableDataSourceSnapshot<GroupSection, GroupValue>()
                 snapshot.appendSections([.groups])
                 snapshot.appendItems(groups, toSection: .groups)
                 self.groupsCollectionView.diffableDataSource.apply(snapshot)
-        }
-        .store(in: &cancellables)
+            }
+            .store(in: &cancellables)
     }
 }

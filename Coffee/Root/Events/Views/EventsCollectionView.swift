@@ -1,23 +1,18 @@
-//
-//  EventsCollectionView.swift
-//  Coffee
-//
-//  Created by Joe Blau on 4/2/20.
-//  Copyright © 2020 Joe Blau. All rights reserved.
-//
+// EventsCollectionView.swift
+// Copyright (c) 2020 Joe Blau
 
 import UIKit
 
-class EventsCollectionView: UICollectionView {
+final class EventsCollectionView: UICollectionView {
     lazy var diffableDataSource: UICollectionViewDiffableDataSource<EventSection, EventValue> = {
-        UICollectionViewDiffableDataSource(collectionView: self) { (collectionView, indexPath, eventValue) in
+        UICollectionViewDiffableDataSource(collectionView: self) { collectionView, indexPath, eventValue in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EventCollectionViewCell.id,
                                                                 for: indexPath) as? EventCollectionViewCell else { return nil }
             cell.configure(with: eventValue.event)
             return cell
         }
     }()
-        
+
     init() {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                               heightDimension: .estimated(300.0))

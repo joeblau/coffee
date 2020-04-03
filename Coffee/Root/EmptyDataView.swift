@@ -1,14 +1,9 @@
-//
-//  EmptyDataView.swift
-//  Coffee
-//
-//  Created by Joe Blau on 4/2/20.
-//  Copyright © 2020 Joe Blau. All rights reserved.
-//
+// EmptyDataView.swift
+// Copyright (c) 2020 Joe Blau
 
 import UIKit
 
-class EmptyDataView: UIView {
+final class EmptyDataView: UIView {
     var emojiXConstriant: NSLayoutConstraint?
     var shadowWidthConstraint: NSLayoutConstraint?
     var shadowHeightConstraint: NSLayoutConstraint?
@@ -39,16 +34,16 @@ class EmptyDataView: UIView {
         v.tintColor = .secondarySystemBackground
         return v
     }()
-    
-    init(title: String) {
+
+    init(title _: String) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         titleLabel.text = NSLocalizedString("next_event_unavailable", comment: "No upcoming events")
-        
+
         addSubview(emoji)
         addSubview(shadow)
         addSubview(titleLabel)
-        
+
         emojiXConstriant = emoji.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -50)
         shadowWidthConstraint = shadow.widthAnchor.constraint(equalToConstant: 60.0)
         shadowHeightConstraint = shadow.heightAnchor.constraint(equalToConstant: 24.0)
@@ -57,12 +52,11 @@ class EmptyDataView: UIView {
             widthAnchor.constraint(equalToConstant: 300),
             heightAnchor.constraint(equalToConstant: 300),
             emoji.centerXAnchor.constraint(equalTo: centerXAnchor),
-            
+
             emojiXConstriant!,
             emoji.heightAnchor.constraint(greaterThanOrEqualToConstant: 10.0),
             emoji.widthAnchor.constraint(greaterThanOrEqualToConstant: 10.0),
 
-            
             shadow.centerXAnchor.constraint(equalTo: centerXAnchor),
             shadow.centerYAnchor.constraint(equalTo: centerYAnchor),
             shadowWidthConstraint!,
