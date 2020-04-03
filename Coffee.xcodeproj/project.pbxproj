@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ED12C4F524367AC500BE7FCF /* MKMarkerAnnotationView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED12C4F424367AC500BE7FCF /* MKMarkerAnnotationView+Extensions.swift */; };
 		ED12C5182436E13800BE7FCF /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED12C5172436E13800BE7FCF /* NextViewController.swift */; };
+		ED12C51A2436E88700BE7FCF /* EmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED12C5192436E88700BE7FCF /* EmptyDataView.swift */; };
 		ED33A27424367A0700A01F50 /* VenueViewController+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33A27324367A0700A01F50 /* VenueViewController+MKMapViewDelegate.swift */; };
 		ED86D2592434183B007281C6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED86D2582434183B007281C6 /* Localizable.strings */; };
 		ED86D25B24341FD6007281C6 /* GroupsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86D25A24341FD6007281C6 /* GroupsCollectionView.swift */; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		ED12C4F424367AC500BE7FCF /* MKMarkerAnnotationView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMarkerAnnotationView+Extensions.swift"; sourceTree = "<group>"; };
 		ED12C5172436E13800BE7FCF /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		ED12C5192436E88700BE7FCF /* EmptyDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataView.swift; sourceTree = "<group>"; };
 		ED33A27324367A0700A01F50 /* VenueViewController+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VenueViewController+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
 		ED86D2582434183B007281C6 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = Coffee/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		ED86D25A24341FD6007281C6 /* GroupsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsCollectionView.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				EDEEDCD1243414FA005BF814 /* RootTabBarController.swift */,
 				ED86D2702435886F007281C6 /* Events */,
 				EDEEDD03243416EF005BF814 /* Groups */,
+				ED12C5192436E88700BE7FCF /* EmptyDataView.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED12C51A2436E88700BE7FCF /* EmptyDataView.swift in Sources */,
 				ED86D28624364518007281C6 /* World.swift in Sources */,
 				ED33A27424367A0700A01F50 /* VenueViewController+MKMapViewDelegate.swift in Sources */,
 				ED86D284243634C3007281C6 /* EventsCollectionView.swift in Sources */,

@@ -22,7 +22,7 @@ final class GroupsViewController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
         tabBarItem.title = NSLocalizedString("tab_groups_title", comment: "Coffee groups")
-        tabBarItem.image = UIImage(systemName: "person.3")
+        tabBarItem.image = UIImage(systemName: "person.3.fill")
     }
     
     required init?(coder: NSCoder) {
